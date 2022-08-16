@@ -1,15 +1,26 @@
 package juego;
 
 import co.com.sofka.domain.generic.AggregateEvent;
-import juego.values.JuegoId;
+import juego.entities.Jugador;
+import juego.entities.Tablero;
+import juego.values.EstadoJuego;
+import juego.values.GameId;
+import juego.values.Winner;
 
-public class Game extends AggregateEvent<JuegoId> {
+import java.util.Set;
+
+public class Game extends AggregateEvent<GameId> {
     /**
      * Instantiates a new Aggregate event.
      *
      * @param entityId the entity id
      */
-    public Game(JuegoId entityId) {
+    protected Tablero tablero;
+    protected Set<Jugador> jugadorSet;
+    protected EstadoJuego estadoJuego;
+    protected Winner winner;
+    public Game(GameId entityId) {
         super(entityId);
     }
+
 }
