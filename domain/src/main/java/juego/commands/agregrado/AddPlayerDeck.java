@@ -2,23 +2,29 @@ package juego.commands.agregrado;
 
 import co.com.sofka.domain.generic.Command;
 import juego.values.GameId;
-import juego.values.JugadorId;
+import juego.values.PlayerId;
+import juego.values.Mazo;
 
 public class AddPlayerDeck extends Command {
     private final GameId gameId;
-    private final JugadorId jugadorId;
+    private final PlayerId playerId;
+    private final Mazo deck;
 
-    public AddPlayerDeck(GameId gameId, JugadorId jugadorId) {
+    public AddPlayerDeck(GameId gameId, PlayerId playerId, Mazo deck) {
         this.gameId = gameId;
-        this.jugadorId = jugadorId;
+        this.playerId = playerId;
+        this.deck = deck;
     }
 
     public GameId getGameId() {
         return gameId;
     }
 
-    public JugadorId getJugadorId() {
-        return jugadorId;
+    public PlayerId getJugadorId() {
+        return playerId;
     }
 
+    public Mazo getDeck() {
+        return deck;
+    }
 }

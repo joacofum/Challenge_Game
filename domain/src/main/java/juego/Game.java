@@ -3,7 +3,7 @@ package juego;
 import co.com.sofka.domain.generic.AggregateEvent;
 import juego.entities.Jugador;
 import juego.entities.Tablero;
-import juego.values.EstadoJuego;
+import juego.values.GameStatus;
 import juego.values.GameId;
 import juego.values.Winner;
 
@@ -17,7 +17,7 @@ public class Game extends AggregateEvent<GameId> {
      */
     protected Tablero tablero;
     protected Set<Jugador> jugadorSet;
-    protected EstadoJuego estadoJuego;
+    protected GameStatus gameStatus;
     protected Winner winner;
     public Game(GameId entityId) {
         super(entityId);

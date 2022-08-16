@@ -1,6 +1,6 @@
 package juego.values;
 
-public enum EstadoJuego {
+public enum GameStatus {
     INICIADO,
     TERMINADO,
     JUGANDO

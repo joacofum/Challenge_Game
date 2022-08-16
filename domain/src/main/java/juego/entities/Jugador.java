@@ -2,11 +2,11 @@ package juego.entities;
 
 
 import co.com.sofka.domain.generic.Entity;
-import juego.values.JugadorId;
+import juego.values.PlayerId;
 import juego.values.Mazo;
 import juego.values.UsuarioId;
 
-public class Jugador extends Entity<JugadorId> {
+public class Jugador extends Entity<PlayerId> {
     /**
      * Instantiates a new Entity.
      *
@@ -20,11 +20,11 @@ public class Jugador extends Entity<JugadorId> {
     protected UsuarioId usuarioId;
 
 
-    public Jugador(JugadorId entityId) {
+    public Jugador(PlayerId entityId) {
         super(entityId);
     }
 
-    public Jugador(JugadorId entityId, String alias, String email, Integer puntos, Mazo mazo, UsuarioId usuarioId) {
+    public Jugador(PlayerId entityId, String alias, String email, Integer puntos, Mazo mazo, UsuarioId usuarioId) {
         super(entityId);
         this.alias = alias;
         this.email = email;

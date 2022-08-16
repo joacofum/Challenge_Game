@@ -2,17 +2,17 @@ package juego.commands.agregrado;
 
 import co.com.sofka.domain.generic.Command;
 import juego.values.GameId;
-import juego.values.JugadorId;
+import juego.values.PlayerId;
 
 public class UpdatePlayerScore extends Command {
     private final GameId gameId;
-    private final JugadorId jugadorId;
+    private final PlayerId playerId;
     private final Integer puntos;
 
 
-    public UpdatePlayerScore(GameId gameId, JugadorId jugadorId, Integer puntos) {
+    public UpdatePlayerScore(GameId gameId, PlayerId playerId, Integer puntos) {
         this.gameId = gameId;
-        this.jugadorId = jugadorId;
+        this.playerId = playerId;
         this.puntos = puntos;
     }
 
@@ -20,8 +20,8 @@ public class UpdatePlayerScore extends Command {
         return gameId;
     }
 
-    public JugadorId getJugadorId() {
-        return jugadorId;
+    public PlayerId getJugadorId() {
+        return playerId;
     }
 
     public Integer getPuntos() {

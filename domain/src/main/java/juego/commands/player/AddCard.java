@@ -2,26 +2,26 @@ package juego.commands.player;
 
 import co.com.sofka.domain.generic.Command;
 import juego.values.Carta;
-import juego.values.JuegoId;
-import juego.values.JugadorId;
+import juego.values.GameId;
+import juego.values.PlayerId;
 
 public class AddCard extends Command {
-    private final JuegoId juegoId;
-    private final JugadorId jugadorId;
+    private final GameId gameId;
+    private final PlayerId playerId;
     private final Carta carta;
 
-    public AddCard(JuegoId juegoId, JugadorId jugadorId, Carta carta) {
-        this.juegoId = juegoId;
-        this.jugadorId = jugadorId;
+    public AddCard(GameId gameId, PlayerId playerId, Carta carta) {
+        this.gameId = gameId;
+        this.playerId = playerId;
         this.carta = carta;
     }
 
-    public JuegoId getJuegoId() {
-        return juegoId;
+    public GameId getGameId() {
+        return gameId;
     }
 
-    public JugadorId getJugadorId() {
-        return jugadorId;
+    public PlayerId getJugadorId() {
+        return playerId;
     }
 
     public Carta getCarta() {

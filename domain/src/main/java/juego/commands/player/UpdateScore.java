@@ -1,26 +1,26 @@
 package juego.commands.player;
 
 import co.com.sofka.domain.generic.Command;
-import juego.values.JuegoId;
-import juego.values.JugadorId;
+import juego.values.GameId;
+import juego.values.PlayerId;
 
 public class UpdateScore extends Command {
-    private final JuegoId juegoId;
-    private final JugadorId jugadorId;
+    private final GameId gameId;
+    private final PlayerId playerId;
     private final Integer score;
 
-    public UpdateScore(JuegoId juegoId, JugadorId jugadorId, Integer score) {
-        this.juegoId = juegoId;
-        this.jugadorId = jugadorId;
+    public UpdateScore(GameId gameId, PlayerId playerId, Integer score) {
+        this.gameId = gameId;
+        this.playerId = playerId;
         this.score = score;
     }
 
-    public JuegoId getJuegoId() {
-        return juegoId;
+    public GameId getGameId() {
+        return gameId;
     }
 
-    public JugadorId getJugadorId() {
-        return jugadorId;
+    public PlayerId getJugadorId() {
+        return playerId;
     }
 
     public Integer getScore() {

@@ -2,7 +2,7 @@ package juego.commands.agregrado;
 
 import co.com.sofka.domain.generic.Command;
 import juego.entities.Jugador;
-import juego.values.EstadoJuego;
+import juego.values.GameStatus;
 import juego.values.GameId;
 import juego.values.Winner;
 
@@ -11,14 +11,14 @@ import java.util.Set;
 public class CreateGame extends Command {
     private final GameId gameId;
     private final Set<Jugador> jugadorSet;
-    private final EstadoJuego estadoJuego;
+    private final GameStatus gameStatus;
     private final Winner winner;
 
 
-    public CreateGame(GameId gameId, Set<Jugador> jugadorSet, EstadoJuego estadoJuego) {
+    public CreateGame(GameId gameId, Set<Jugador> jugadorSet, GameStatus gameStatus) {
         this.gameId = gameId;
         this.jugadorSet = jugadorSet;
-        this.estadoJuego = estadoJuego;
+        this.gameStatus = gameStatus;
         this.winner = null;
     }
 
@@ -30,8 +30,8 @@ public class CreateGame extends Command {
         return jugadorSet;
     }
 
-    public EstadoJuego getEstadoJuego() {
-        return estadoJuego;
+    public GameStatus getEstadoJuego() {
+        return gameStatus;
     }
 
     public Winner getWinner() {
