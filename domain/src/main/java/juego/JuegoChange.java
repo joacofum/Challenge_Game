@@ -1,4 +1,6 @@
 package juego;
 
-public class JuegoChange {
+import co.com.sofka.domain.generic.EventChange;
+
+public class JuegoChange extends EventChange {
 }
