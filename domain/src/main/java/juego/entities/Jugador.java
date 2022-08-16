@@ -34,6 +34,27 @@ public class Jugador extends Entity<JugadorId> {
     }
 
     //Funciones de Jugador.
+    public void updateScore(Integer score){
+        this.puntos = score;
+    }
 
+    public String getAlias() {
+        return alias;
+    }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public Integer getPuntos() {
+        return puntos;
+    }
+
+    public Mazo getMazo() {
+        return mazo;
+    }
+
+    public UsuarioId getUsuarioId() {
+        return usuarioId;
+    }
 }
